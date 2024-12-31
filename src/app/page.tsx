@@ -13,7 +13,7 @@ import {
 } from 'chart.js';
 import { Pie, Line } from 'react-chartjs-2';
 import jsPDF from 'jspdf';
-import autoTable from 'jspdf-autotable';
+import 'jspdf-autotable';
 
 ChartJS.register(
   ArcElement,
@@ -590,10 +590,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="mt-10">
-        <h1 className="text-4xl font-bold text-center text-gray-800">
-          Budget Tracker
-        </h1>
+      <header className="mt-10 px-4">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-800">
+            Budget Tracker
+          </h1>
+        </div>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-8">
